@@ -1,0 +1,21 @@
+.titleComment{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.carts {
+    width: 500px;
+    height: 150px;
+    border-radius: 8px;
+    background: rgb(203, 202, 202);
+    padding: 20px;
+    margin-bottom: 20px;
+}
