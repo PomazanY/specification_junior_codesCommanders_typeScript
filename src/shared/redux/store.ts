@@ -42,7 +42,5 @@ export const store = configureStore({
 
 export const persistor = persistStore(store);
 
-
-//использовать RootState и AppDispatch в других компонентах для типизации useSelector и useDispatch.
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

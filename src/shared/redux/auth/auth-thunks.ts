@@ -11,11 +11,9 @@ export const fetchUserByUsername = createAsyncThunk(
       );
 
       if (response.data.length === 0) {
-        // пользователь не найден
-        return rejectWithValue("Пользователь не найден");
+          return rejectWithValue("Пользователь не найден");
       }
 
-      // найден — возвращаем первого
       return response.data[0];
     } catch (error) {
       return rejectWithValue((error as Error).message);

@@ -1,20 +1,20 @@
 import type { ReactNode } from "react";
 import styles from "./ButtonSend.module.css"
 
-type ContainerProps = {
+type ButtonInfo = {
   children: ReactNode;
   type: "button" | "submit" | "reset"; 
   onClick?: () => void;
 };
 
-const ButtonSend = ({ children, type, onClick }: ContainerProps) => {
+const ButtonSend = (buttonInfo: ButtonInfo) => {
     return (
         <button
-      type={type}
+      type={buttonInfo.type}
       className={styles.btn}
-      onClick={onClick} 
+      onClick={buttonInfo.onClick} 
     >
-      {children}
+      {buttonInfo.children}
     </button>
     )
 }

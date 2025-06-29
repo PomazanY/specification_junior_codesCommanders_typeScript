@@ -8,8 +8,7 @@ const backendInstance = axios.create({
 
 export const registerUser = requestDecorator(async payload => {
     const {data} = await backendInstance.post("/all", payload);
-    console.log(data);
-    
+        
     console.log("Ответ от сервера:", data);
     return data;
     
